@@ -8,6 +8,8 @@
     "ws": "^6.1.4"
   },
   "scripts": {
-    "start": "node server.js -b 0.0.0.0"
+    "start": "node server.js -b 0.0.0.0",
+    "proxy": "node local.js -s shadowsocks-heroku88.herokuapp.com -l 1080 -m rc4 -k foobar00001 -r 80",
+    "heroku_config": "heroku config:set METHOD=rc4 KEY=foobar00001 --app shadowsocks-heroku88"
   }
 }
